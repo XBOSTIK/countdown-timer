@@ -2,9 +2,51 @@
 * {
     box-sizing: border-box;
 }
+/* 
+    --accent-color: #1d1c1c; 
+    --border-bottom-color: #2c2c2c; 
+    --bg-color: #26337e;
 
-:root {
+    
+    --main dark
     --accent-color: #ba3a1d;
+    --border-bottom-color: #893e2d; 
+    --bg-color: #1d1d1d;
+    --title-color: #ffffff;
+    --bg-block-color: #ffffff;
+
+    --light
+    --accent-color: #212121;
+    --border-bottom-color: #1b1b1b; 
+    --bg-color: #ffffff;
+    --title-color: #161616;
+    --bg-block-color: #cacaca;
+
+    --purple
+    --accent-color: #212121;
+    --border-bottom-color: #1b1b1b; 
+    --bg-color: #563a98;
+    --title-color: #ffffff;
+    --bg-block-color: #ffffff;
+
+    --orange
+    --accent-color: #2f2f2f;
+    --border-bottom-color: #1b1b1b; 
+    --bg-color: #e6624a;
+    --title-color: #e9e9e9;
+    --bg-block-color: #e9e9e9;
+
+
+    --new main
+    --accent-color: #2f2f2f;
+    --border-bottom-color: #1b1b1b; 
+ */
+:root {
+    --accent-color: #1774ae;
+    --border-bottom-color: #135985; 
+    --bg-color: #1d1d1d;
+    --title-color: #ffffff;
+    --bg-block-color: #ffffff;
     --font-Family: 'Montserrat', 'sans-serif';
 }
 html, body {
@@ -14,10 +56,10 @@ html, body {
 body {
     margin: 0;
     padding: 0;
-    background-color: #1d1d1d;
+    background-color: var(--bg-color);
     font-weight: 600;
     font-family: var(--font-Family);
-    color: #ffffff;
+    color: var(--white-color);
 }
 
 h1, p {
@@ -47,6 +89,7 @@ div {
     font-weight: 900;
     margin-bottom: 30px;
     text-align: center;
+    color: var(--title-color)
 }
 .timer__inner-items {
     display: flex;
@@ -57,12 +100,11 @@ div {
 .timer__inner-item {
     width: 200px;
     padding: 30px 0;
-    background-color: #ffffff;
+    background-color: var(--bg-block-color);
     border-radius: 10px;
     text-align: center;
     border-right: 5px solid var(--accent-color);
-    border-bottom: 3px solid #893e2d;
-    color: #000;
+    border-bottom: 3px solid var(--border-bottom-color);
 }
 .timer__inner-date {
     font-size: 68px;

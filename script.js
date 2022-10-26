@@ -4,13 +4,11 @@ document.addEventListener("DOMContentLoaded", () => {
         minutes = document.querySelector('#minutes'),
         seconds = document.querySelector('#seconds');
 
-    
+        let openDate = new Date("October 26 2022 18:12")
 
     function getTime(){     
-        let openDate = new Date("December 31 2022 00:00")
         let newDate = new Date();
         let  waitDate = openDate - newDate;
-        console.log(waitDate)
         let   dayWait = Math.floor(waitDate / 1000 / 60 / 60 / 24),
                 hoursWait = Math.floor(waitDate / 1000 / 60 / 60) % 24,
                 minutesWait = Math.floor(waitDate / 1000 / 60) % 60,
@@ -18,10 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
         if(waitDate <= 0) {
-            dayWait = dayWait + 30;
-            hoursWait = hoursWait + 24;
-            minutesWait = minutesWait + 60;
-            secondsWait = secondsWait + 60;
+            openDate.setMonth(openDate.getMonth() + 1)
         } 
 
         day.innerHTML = getZero(dayWait);
